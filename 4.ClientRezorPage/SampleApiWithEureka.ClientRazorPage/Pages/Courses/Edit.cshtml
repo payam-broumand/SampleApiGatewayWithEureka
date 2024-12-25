@@ -1,0 +1,33 @@
+﻿@page "{id?}"
+@model SampleApiWithEureka.ClientRazorPage.Pages.Courses.EditModel
+@{
+}
+<section class="card">
+	<div class="card-body">
+		<h4 class="card-title alert alert-info">ویرایش دوره آموزشی</h4>
+		<partial name="PrintErrors" model="@MessageModel.Messages" />
+		<form method="post">
+			<input type="hidden" asp-for="EditCourseViewModel.Id" />
+			<div class="mt-2">
+				<label for="title" asp-for="EditCourseViewModel.Title"></label>
+				<input class="form-control" type="text" asp-for="EditCourseViewModel.Title" id="title" />
+				<span asp-validation-for="EditCourseViewModel.Title" class="text-danger"></span>
+			</div>
+			<div class="mt-2">
+				<label for="title" asp-for="EditCourseViewModel.Price"></label>
+				<input class="form-control" type="text" asp-for="EditCourseViewModel.Price" id="title" />
+				<span asp-validation-for="EditCourseViewModel.Price" class="text-danger"></span>
+			</div>
+			<div class="mt-2">
+				<label for="categoryid" asp-for="EditCourseViewModel.CategoryId"></label>
+				<select class="form-control" asp-for="EditCourseViewModel.CategoryId" asp-items="@Model.EditCourseViewModel.Categories">
+					<option value="-1">انتخاب دسته آموزشی</option>
+				</select>
+				<span asp-validation-for="EditCourseViewModel.CategoryId" class="text-danger"></span>
+			</div>
+			<div class="mt-3 text-start">
+				<button class="btn btn-success">ذخیره تغییرات</button>
+			</div>
+		</form>
+	</div>
+</section>

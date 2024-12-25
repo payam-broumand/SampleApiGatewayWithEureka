@@ -1,0 +1,29 @@
+﻿@page "{id?}"
+@model SampleApiWithEureka.ClientRazorPage.Pages.Courses.DeleteModel
+@{
+}
+<section class="card">
+	<div class="card-body">
+		<h4 class="card-title alert alert-danger">حذف دوره آموزشی</h4>
+		<form method="post">
+			<input type="hidden" asp-for="DeleteCourseViewModel.Id" />
+			<div class="mt-2">
+				<label for="title" asp-for="DeleteCourseViewModel.Title"></label>
+				<input readonly="readonly" class="form-control" type="text" asp-for="DeleteCourseViewModel.Title" id="title" /> 
+			</div>
+			<div class="mt-2">
+				<label for="title" asp-for="DeleteCourseViewModel.Price"></label>
+				<input readonly="readonly" class="form-control" type="text" asp-for="DeleteCourseViewModel.Price" id="title" /> 
+			</div>
+			<div class="mt-2">
+				<label for="categoryid" asp-for="DeleteCourseViewModel.CategoryId"></label>
+				<select disabled="disabled" class="form-control" asp-for="DeleteCourseViewModel.CategoryId" asp-items="@Model.DeleteCourseViewModel.Categories">
+					<option value="-1">انتخاب دسته آموزشی</option>
+				</select>
+			</div>
+			<div class="mt-3 text-start">
+				<button class="btn btn-danger">حذف</button>
+			</div>
+		</form>
+	</div>
+</section>

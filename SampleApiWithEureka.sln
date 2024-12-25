@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.CategoryService", "1.CategoryService", "{A2CCDE43-B4E7-457C-9B98-4FB29DDC8732}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.CourseService", "2.CourseService", "{749DEDE7-C3F5-4E26-927C-DD7AB556E3D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.ServiceRegistery", "3.ServiceRegistery", "{A7A3E472-EB8B-4B8B-921B-C061C2672921}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.ClientRazotPage", "4.ClientRazotPage", "{15F0BD69-32EA-4A14-A07D-4D968F33EE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApiWithEureka.CategoryService", "1.CategoryService\SampleApiWithEureka.CategoryService\SampleApiWithEureka.CategoryService.csproj", "{FE355050-2080-4A19-8708-AC90028B3BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApiWithEureka.CourseService", "2.CourseService\SampleApiWithEureka.CourseService\SampleApiWithEureka.CourseService.csproj", "{406FF278-955D-4970-8FF0-89E6163F61EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApiWithEureka.ServiceRegistery", "3.ServiceRegistery\SampleApiWithEureka.ServiceRegistery\SampleApiWithEureka.ServiceRegistery.csproj", "{50A6E268-648C-43F2-A79D-A7971D61BAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApiWithEureka.ClientRazorPage", "4.ClientRezorPage\SampleApiWithEureka.ClientRazorPage\SampleApiWithEureka.ClientRazorPage.csproj", "{6C425B02-9D51-4D70-ABD8-5EFEBB37717B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE355050-2080-4A19-8708-AC90028B3BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE355050-2080-4A19-8708-AC90028B3BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE355050-2080-4A19-8708-AC90028B3BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE355050-2080-4A19-8708-AC90028B3BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406FF278-955D-4970-8FF0-89E6163F61EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406FF278-955D-4970-8FF0-89E6163F61EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406FF278-955D-4970-8FF0-89E6163F61EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406FF278-955D-4970-8FF0-89E6163F61EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A6E268-648C-43F2-A79D-A7971D61BAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A6E268-648C-43F2-A79D-A7971D61BAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A6E268-648C-43F2-A79D-A7971D61BAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A6E268-648C-43F2-A79D-A7971D61BAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C425B02-9D51-4D70-ABD8-5EFEBB37717B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C425B02-9D51-4D70-ABD8-5EFEBB37717B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C425B02-9D51-4D70-ABD8-5EFEBB37717B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C425B02-9D51-4D70-ABD8-5EFEBB37717B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE355050-2080-4A19-8708-AC90028B3BF7} = {A2CCDE43-B4E7-457C-9B98-4FB29DDC8732}
+		{406FF278-955D-4970-8FF0-89E6163F61EA} = {749DEDE7-C3F5-4E26-927C-DD7AB556E3D6}
+		{50A6E268-648C-43F2-A79D-A7971D61BAD3} = {A7A3E472-EB8B-4B8B-921B-C061C2672921}
+		{6C425B02-9D51-4D70-ABD8-5EFEBB37717B} = {15F0BD69-32EA-4A14-A07D-4D968F33EE64}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿@page
+@model SampleApiWithEureka.ClientRazorPage.Pages.Courses.AddModel
+@{
+}
+<section class="card">
+	<div class="card-body">
+		<h4 class="card-title alert alert-info">ثبت دوره آموزشی جدید</h4>
+		<partial name="PrintErrors" model="@MessageModel.Messages" />
+		<form method="post"> 
+			<div class="mt-2">
+				<label for="title" asp-for="CreateCourseModel.Title"></label>
+				<input class="form-control" type="text" asp-for="CreateCourseModel.Title" id="title" />
+				<span asp-validation-for="CreateCourseModel.Title" class="text-danger"></span>
+			</div>
+			<div class="mt-2">
+				<label for="title" asp-for="CreateCourseModel.Price"></label>
+				<input class="form-control" type="text" asp-for="CreateCourseModel.Price" id="title" />
+				<span asp-validation-for="CreateCourseModel.Price" class="text-danger"></span>
+			</div>
+			<div class="mt-2">
+				<label for="categoryid" asp-for="CreateCourseModel.CategoryId"></label>
+				<select class="form-control" asp-for="CreateCourseModel.CategoryId" asp-items="@Model.CreateCourseModel.Categories">
+					<option value="-1">انتخاب دسته آموزشی</option>
+				</select>
+				<span asp-validation-for="CreateCourseModel.CategoryId" class="text-danger"></span>
+			</div>
+			<div class="mt-3 text-start">
+				<button class="btn btn-success">ذخیره</button>
+			</div>
+		</form>
+	</div>
+</section>

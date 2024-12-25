@@ -1,0 +1,20 @@
+﻿@page
+@model SampleApiWithEureka.ClientRazorPage.Pages.Categories.AddModel
+@{
+}
+<section class="card">
+	<div class="card-body">
+		<h4 class="card-title alert alert-info">ثبت دسته بندی جدید</h4>
+		<partial name="PrintErrors" model="@MessageModel.Messages" />
+		<form method="post"> 
+			<div class="mt-2">
+				<label for="title" asp-for="Category.Title"></label>
+				<input class="form-control" type="text" asp-for="Category.Title" id="title" />
+				<span asp-validation-for="Category.Title" class="text-danger"></span>
+			</div>
+			<div class="mt-3 text-start">
+				<button class="btn btn-success">ذخیره</button>
+			</div>
+		</form>
+	</div>
+</section>

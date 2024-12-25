@@ -1,0 +1,37 @@
+﻿@page "{id?}"
+@model SampleApiWithEureka.ClientRazorPage.Pages.Categories.CourseListModel
+@{
+}
+<h3 class="alert alert-info">دوره های آموزشی @Model.CategoryModel.Parent.Title</h3>
+<partial name="PrintErrors" model="@MessageModel.Messages">
+<table class="table table-warning">
+	<thead>
+		<tr>
+			<td>شناسه</td>
+			<td>عنوان</td>
+			<td>قیمت</td>
+			<td>ویرایش</td>
+			<td>حذف</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.CategoryModel.ChildList)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Title</td>
+				<td>@($"{item.Price:n0} تومان")</td>
+				<td>
+					<a asp-page="/Courses/Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm">
+						ویرایش
+					</a>
+				</td>
+				<td>
+					<a asp-page="/Courses/Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+						حذف
+					</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

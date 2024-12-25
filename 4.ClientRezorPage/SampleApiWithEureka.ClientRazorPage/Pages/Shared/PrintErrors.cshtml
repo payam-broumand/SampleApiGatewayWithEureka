@@ -1,0 +1,16 @@
+﻿@model IReadOnlyList<string>
+@if (MessageModel.Messages.Any())
+{
+	<div id="messages-list">
+		@foreach (var item in Model)
+		{
+		<div class="text-end mb-2">
+			@Html.Raw(item)
+		</div>
+		}
+	</div>
+}
+@if (MessageModel.Messages.Any())
+{
+	MessageModel.DeleteMessages();
+}

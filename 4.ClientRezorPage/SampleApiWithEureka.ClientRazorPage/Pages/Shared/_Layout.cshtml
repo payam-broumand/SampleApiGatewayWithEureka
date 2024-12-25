@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html dir="rtl">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<style>
+		#messages-list {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<header class="container">
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" asp-page="/Index">صفحه اصلی</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-page="/Categories/Index">دسته بندی ها</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-page="/Courses/Index">مدیریت دوره های آموزشی</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-page="/Categories/Add">ثبت دسته بندی جدید</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-page="/Courses/Add">ثبت دوره آموزشی جدید</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="container">
+		@RenderBody()
+	</main>
+	<script src="/lib/jquery/jquery.min.js"></script>
+	<script src="/lib/jquery-validate/jquery.validate.min.js"></script>
+	<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+	<script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			setTimeout(function () {
+				$("#messages-list").slideDown(400);
+			}, 100);
+
+			setTimeout(function () {
+				$("#messages-list").slideUp(400);
+			}, 3000);
+		});
+	</script>
+</body>
+</html>
